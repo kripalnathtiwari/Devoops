@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mental Health Simulator</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f6fb;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+    h1 { margin-top: 0; }
+    input, button {
+      padding: 10px;
+      margin-top: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+    button {
+      background: #2b65e2;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1f4cb0;
+    }
+    .section {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 8px;
+      background: #f8faff;
+      border: 1px solid #e1e6f0;
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+  <h1>Mental Health Simulator</h1>
+
+  <!-- Mood Input -->
+  <div class="section">
+    <h3>Enter Mood</h3>
+    <input id="moodInput" type="text" placeholder="happy, sad, stressed..." />
+    <br>
+    <button onclick="submitMood()">Submit Mood</button>
+
+    <div id="analysisBox" style="margin-top:15px; display:none;">
+      <p><strong>Analysis:</strong> <span id="analysisText"></span></p>
+      <p><strong>Support:</strong> <span id="supportText"></span></p>
+    </div>
+  </div>
+
+  <!-- Mood History -->
+  <div class="section">
+    <h3>Mood History</h3>
+    <button onclick="loadHistory()">Refresh History</button>
+    <ul id="historyList"></ul>
+  </div>
+
+  <!-- Quotes -->
+  <div class="section">
+    <h3>Motivational Quote</h3>
+    <button onclick="getQuote()">Get Quote</button>
+    <p id="quoteText" style="font-style: italic; margin-top:10px;"></p>
+  </div>
+
+</div>
+
+<script>
+  // Call backend API: Add mood + get analysis
+  function submitMood() {
+    const mood = document.getElementById("moodInput").value.trim();
+    if (!mood) return alert("Please enter a mood");
+
+    fetch("/api/mood/add", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ mood: mood })
+    })
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("analysisBox").style.display = "block";
+      document.getElementById("analysisText").innerText = data.analysis;
+      document.getElementById("supportText").innerText = data.support;
+
+      loadHistory(); 
+      document.getElementById("moodInput").value = "";
+    });
+  }
+
+  // Load mood history from backend
+  function loadHistory() {
+    fetch("/api/mood/history")
+      .then(res => res.json())
+      .then(list => {
+        const ul = document.getElementById("historyList");
+        ul.innerHTML = "";
+        if (list.length === 0) {
+          ul.innerHTML = "<li>No history available.</li>";
+          return;
+        }
+        list.forEach(m => {
+          const li = document.createElement("li");
+          li.innerText = m;
+          ul.appendChild(li);
+        });
+      });
+  }
+
+  // Get random quote from backend
+  function getQuote() {
+    fetch("/api/mood/quote")
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("quoteText").innerText = data.quote;
+      });
+  }
+
+  // Load on page start
+  loadHistory();
+</script>
+
+</body>
+</html>
+
