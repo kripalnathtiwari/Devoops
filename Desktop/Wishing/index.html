@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday My Love ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body class="show-cake">
+    <!-- Magical Cake Landing Layer -->
+    <div id="cake-overlay" class="full-screen-overlay">
+        <div class="cake-content-real">
+            <div class="candle-real" id="main-candle">
+                <div class="flame" id="main-flame"></div>
+            </div>
+            <img src="assets/real_cake.png" alt="Birthday Cake" class="real-cake-img glow-pulse">
+            <h1 class="shimmer-text cake-msg pulse">To My One and Only... ❤️</h1>
+            <p class="tap-hint">✨ Tap to Celebrate ✨</p>
+        </div>
+    </div>
+
+    <!-- Main Site Container -->
+    <div id="main-site-wrapper" class="hidden-site">
+
+
+        <!-- Background Music -->
+        <div class="music-controls">
+            <button id="toggle-music" title="Toggle Music">🎵</button>
+            <audio id="bg-music" loop>
+                <source src="https://archive.org/download/HappyBirthdayToYou_201602/Happy%20Birthday%20to%20You.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <!-- Landing Page -->
+        <header id="landing-page" class="full-screen">
+            <div id="stardust-container" class="stardust-bg"></div>
+            <div class="floating-hearts" id="hearts-container"></div>
+            <div class="content glass-card">
+                <h1 class="glow-text">Happy Birthday My Love ❤️</h1>
+                <p class="fade-in">To the most beautiful girl in the world...</p>
+                <button id="enter-btn" class="main-btn">Click to Enter 💖</button>
+            </div>
+        </header>
+
+        <main id="main-content" class="hidden">
+            <!-- Love Message Section -->
+            <section id="love-message" class="section">
+                <div class="message-bg-overlay" style="background-image: url('assets/smile6.png');"></div>
+                <div class="container">
+                    <div class="glass-card portrait-section">
+                        <div class="photo-frame-light">
+                            <img src="assets/smile6.png" alt="My Beautiful Girl" class="hero-photo">
+                        </div>
+                        <h2 class="section-title">My Dearest Love ❤️</h2>
+                        <p id="typing-text" class="heartfelt-message"></p>
+                        <div class="message-footer">Yours Always ✨</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Memories Gallery -->
+            <section id="memories" class="section">
+                <div class="container gallery-container">
+                    <h2 class="section-title shimmer-text">A Journey of Memories 📸</h2>
+                    <p class="timer-subtitle">Moments that will stay in my heart forever.</p>
+                    <div class="circular-slider">
+                        <div class="carousel-3d" id="carousel-3d">
+                            <div class="carousel-item"><img src="assets/memory_custom.png" alt="Love Card"></div>
+                            <div class="carousel-item"><img src="assets/gallery1.png" alt="Memory 1"></div>
+                            <div class="carousel-item"><img src="assets/gallery2.png" alt="Memory 2"></div>
+                            <div class="carousel-item"><img src="assets/gallery3.png" alt="Memory 3"></div>
+                            <div class="carousel-item"><img src="assets/gallery4.png" alt="Memory 4"></div>
+                            <div class="carousel-item"><img src="assets/gallery5.png" alt="Memory 5"></div>
+                            <div class="carousel-item"><img src="assets/gallery6.png" alt="Memory 6"></div>
+                            <div class="carousel-item"><img src="assets/custom_bg.png" alt="Love Globe"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="nav-btn prev-btn">✨</button>
+                        <button class="nav-btn next-btn">✨</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reasons Section -->
+            <section id="reasons" class="section">
+                <div class="container">
+                    <h2 class="section-title">Reasons I Love You 💖</h2>
+                    <div class="cards-container">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front glass-card">
+                                    <div class="card-emoji">😊</div>
+                                    <h3>Your Smile</h3>
+                                </div>
+                                <div class="flip-card-back pink-card">
+                                    <p>It lights up my entire world even on my darkest days.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front glass-card">
+                                    <div class="card-emoji">🌸</div>
+                                    <h3>Your Kindness</h3>
+                                </div>
+                                <div class="flip-card-back pink-card">
+                                    <p>The way you care for everyone around you is so beautiful.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front glass-card">
+                                    <div class="card-emoji">✨</div>
+                                    <h3>Your Strength</h3>
+                                </div>
+                                <div class="flip-card-back pink-card">
+                                    <p>I am in awe of how you handle everything with such grace.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Time Together Timer -->
+            <section id="timer" class="section">
+                <div class="container">
+                    <div class="glass-card timer-card">
+                        <h2 class="section-title">Our Time Together ⏳</h2>
+                        <p class="timer-subtitle">Every second with you is a blessing.</p>
+                        <div id="countdown" class="countdown-container">
+                            <div class="time-box"><span id="days">00</span><p>Days</p></div>
+                            <div class="time-box"><span id="hours">00</span><p>Hours</p></div>
+                            <div class="time-box"><span id="minutes">00</span><p>Mins</p></div>
+                            <div class="time-box"><span id="seconds">00</span><p>Secs</p></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Surprise Section -->
+            <section id="surprise" class="section center">
+                <div class="container">
+                    <button id="surprise-btn" class="main-btn glow-pulse">Click for a Surprise 💖</button>
+                </div>
+            </section>
+
+            <!-- Closing Message -->
+            <footer class="section">
+                <div class="container">
+                    <div class="glass-card footer-card">
+                        <h2 class="glow-text">I Love You Forever ❤️</h2>
+                        <p>Always & Forever Yours.</p>
+                        <div class="sparkles-container" id="footer-sparkles"></div>
+                    </div>
+                </div>
+            </footer>
+        </main> <!-- End Main Content -->
+    </div> <!-- End Main Site Wrapper -->
+
+    <!-- Hidden Surprise Page Section -->
+    <section id="surprise-page" class="hidden-page">
+        <div class="container surprise-container">
+            <button id="back-btn" class="nav-btn-back">🔙 Back to Main</button>
+            <div class="header-content">
+                <h1 class="shimmer-text">Treasures of My Heart</h1>
+                <p class="timer-subtitle">The reasons you are the most special 💎</p>
+            </div>
+            
+            <div class="surprise-grid">
+                <div class="surprise-item glass-card" id="smile-card">
+                    <div class="card-glow"></div>
+                    <div class="surprise-emoji">😊</div>
+                    <h3>Your Smile</h3>
+                    <p class="tap-hint">Tap to Open Sanctuary</p>
+                    <div class="hidden-content-preview">
+                        <img src="assets/smile1.png" alt="Smile Preview" class="card-thumbnail">
+                    </div>
+                </div>
+
+                <div class="surprise-item glass-card" id="meetup-card">
+                    <div class="card-glow"></div>
+                    <div class="surprise-emoji">📍</div>
+                    <h3>Best Meet Up</h3>
+                    <p class="tap-hint">Tap to Open Timeline</p>
+                    <div class="hidden-content-preview">
+                        <img src="assets/meetup1.png" alt="Meetup Preview" class="card-thumbnail">
+                    </div>
+                </div>
+
+                <div class="surprise-item glass-card" id="beauty-card">
+                    <div class="card-glow"></div>
+                    <div class="surprise-emoji">✨</div>
+                    <h3>Your Beauty</h3>
+                    <p class="tap-hint">Tap to Open Gallery</p>
+                    <div class="hidden-content-preview">
+                        <img src="assets/gallery6.png" alt="Beauty Preview" class="card-thumbnail">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hidden Smile Page Section -->
+    <section id="smile-page" class="hidden-page-smile">
+        <div class="container smile-page-container">
+            <button id="back-to-surprise-btn-smile" class="nav-btn-back">🔙 Back to Treasures</button>
+            <div class="header-content">
+                <h1 class="shimmer-text">Gifts of Your Smile ❤️</h1>
+                <p class="timer-subtitle">The purest light in my universe.</p>
+            </div>
+            
+            <div class="square-gallery-full">
+                <div class="square-frame-full"><img src="assets/smile1.png" alt="Smile 1"></div>
+                <div class="square-frame-full"><img src="assets/smile2.png" alt="Smile 2"></div>
+                <div class="square-frame-full"><img src="assets/smile3.png" alt="Smile 3"></div>
+                <div class="square-frame-full"><img src="assets/smile4.png" alt="Smile 4"></div>
+                <div class="square-frame-full"><img src="assets/smile5.png" alt="Smile 5"></div>
+            </div>
+
+            <div class="final-love-note">
+                <p class="sweet-note large-note">Every time you smile, the world gets a little bit brighter. I hope these memories make you smile right now too.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hidden Meetup Page Section -->
+    <section id="meetup-page" class="hidden-page-meetup">
+        <div class="container meetup-page-container">
+            <button id="back-to-surprise-btn-meetup" class="nav-btn-back">🔙 Back to Treasures</button>
+            <div class="header-content">
+                <h1 class="shimmer-text">Moments of Our Meetings 🗺️</h1>
+                <p class="timer-subtitle">The days that became my favorite history.</p>
+            </div>
+            
+            <div class="square-gallery-full">
+                <div class="square-frame-full"><img src="assets/meetup1.png" alt="Meetup 1"></div>
+                <div class="square-frame-full"><img src="assets/meetup2.png" alt="Meetup 2"></div>
+                <div class="square-frame-full"><img src="assets/meetup3.png" alt="Meetup 3"></div>
+                <div class="square-frame-full"><img src="assets/meetup4.png" alt="Meetup 4"></div>
+                <div class="square-frame-full"><img src="assets/meetup5.png" alt="Meetup 5"></div>
+                <div class="square-frame-full"><img src="assets/meetup6.png" alt="Meetup 6"></div>
+                <div class="square-frame-full"><img src="assets/meetup7.png" alt="Meetup 7"></div>
+                <div class="square-frame-full"><img src="assets/meetup8.png" alt="Meetup 8"></div>
+            </div>
+
+            <div class="final-love-note">
+                <p class="sweet-note large-note">That day was the start of our forever. Every meeting since then has been a new chapter in our beautiful story. ❤️</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hidden Beauty Page Section -->
+    <section id="beauty-page" class="hidden-page-beauty">
+        <div class="container beauty-page-container">
+            <button id="back-to-surprise-btn-beauty" class="nav-btn-back">🔙 Back to Treasures</button>
+            <div class="header-content">
+                <h1 class="shimmer-text">Reflections of Your Beauty ✨</h1>
+                <p class="timer-subtitle">Gifts and moments that remind me of how amazing you are.</p>
+            </div>
+            
+            <div class="square-gallery-full">
+                <!-- Featured Gifts -->
+                <div class="square-frame-full beauty-featured"><img src="assets/beauty2.png" alt="I Love You Card"></div>
+                <div class="square-frame-full beauty-featured"><img src="assets/beauty3.png" alt="Flowers Bouquet"></div>
+                
+                <!-- Other Beauty Images -->
+                <div class="square-frame-full"><img src="assets/beauty6.png" alt="Sweet Pose"></div>
+                <div class="square-frame-full"><img src="assets/beauty7.png" alt="Yellow Dress"></div>
+                <div class="square-frame-full"><img src="assets/beauty8.png" alt="Portrait"></div>
+                <div class="square-frame-full"><img src="assets/beauty9.png" alt="Facetime Screen"></div>
+                <div class="square-frame-full"><img src="assets/beauty10.png" alt="Flower in Hair"></div>
+                <div class="square-frame-full"><img src="assets/beauty1.png" alt="Love Globe"></div>
+                <div class="square-frame-full"><img src="assets/beauty4.png" alt="Facetime Memory 1"></div>
+                <div class="square-frame-full"><img src="assets/beauty5.png" alt="Facetime Memory 2"></div>
+                <!-- Original content -->
+                <div class="square-frame-full"><img src="assets/gallery6.png" alt="Beauty 1"></div>
+                <div class="square-frame-full"><img src="assets/gallery5.png" alt="Beauty 2"></div>
+            </div>
+
+            <div class="final-love-note">
+                <p class="sweet-note large-note">Every gift, every call, and every second looking at you reminds me of my luck. You are beautiful, inside and out. ❤️</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
