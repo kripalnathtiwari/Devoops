@@ -1,0 +1,3 @@
+Started
+Product: {"id":1,"name":"Revange T-shirt","categoryId":1,"price":"500","imageUrl":"/uploads/1775454939788.png","description":"Great T_shirt","sizes":["M","L","XL"],"colors":["Red"],"rating":null,"isTrending":false}
+Done

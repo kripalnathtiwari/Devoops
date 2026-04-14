@@ -1,0 +1,110 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String   @db.VarChar(100)
+  email     String   @unique @db.VarChar(100)
+  password  String   @db.VarChar(255)
+  role      Role     @default(USER)
+  createdAt DateTime @default(now()) @map("created_at")
+  address   String?
+  city      String?  @db.VarChar(100)
+  phone     String?  @db.VarChar(20)
+  zip       String?  @db.VarChar(20)
+  orders    Order[]
+  reviews     Review[]
+  profilePic  String?  @map("profile_pic")
+  hasClaimedFreeGift Boolean @default(false) @map("has_claimed_free_gift")
+
+  @@map("users")
+}
+
+model Category {
+  id       Int       @id @default(autoincrement())
+  name     String    @db.VarChar(50)
+  icon     String?   @db.VarChar(50)
+  products Product[]
+
+  @@map("categories")
+}
+
+model Product {
+  id          Int         @id @default(autoincrement())
+  name        String      @db.VarChar(100)
+  categoryId  Int         @map("category_id")
+  price       Decimal     @db.Decimal(10, 2)
+  imageUrl    String?     @map("image_url")
+  rating      Decimal?    @db.Decimal(2, 1)
+  isTrending  Boolean     @default(false) @map("is_trending")
+  colors      String[]    @default([])
+  description String?
+  sizes       String[]    @default([])
+  stock       Int         @default(0)
+  colorImages Json?       @default("{}") @map("color_images")
+  orderItems  OrderItem[]
+  category    Category    @relation(fields: [categoryId], references: [id])
+  reviews     Review[]
+  isFreeGift  Boolean     @default(false) @map("is_free_gift")
+
+  @@map("products")
+}
+
+model Order {
+  id         Int         @id @default(autoincrement())
+  userId     Int         @map("user_id")
+  totalPrice Decimal     @map("total_price") @db.Decimal(10, 2)
+  status     Status      @default(PENDING)
+  createdAt  DateTime    @default(now()) @map("created_at")
+  address    String?
+  phone      String?     @db.VarChar(20)
+  orderItems OrderItem[]
+  user       User        @relation(fields: [userId], references: [id])
+
+  @@map("orders")
+}
+
+model OrderItem {
+  id        Int     @id @default(autoincrement())
+  orderId   Int     @map("order_id")
+  productId Int     @map("product_id")
+  quantity  Int
+  price     Decimal @db.Decimal(10, 2)
+  order     Order   @relation(fields: [orderId], references: [id])
+  product   Product @relation(fields: [productId], references: [id])
+
+  @@map("order_items")
+}
+
+model Review {
+  id        Int      @id @default(autoincrement())
+  userId    Int      @map("user_id")
+  productId Int      @map("product_id")
+  rating    Int      @default(5)
+  comment   String?
+  imageUrl  String?  @map("image_url")
+  createdAt DateTime @default(now()) @map("created_at")
+  product   Product  @relation(fields: [productId], references: [id])
+  user      User     @relation(fields: [userId], references: [id])
+
+  @@map("reviews")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+enum Status {
+  PENDING
+  PROCESSING
+  SHIPPED
+  DELIVERED
+  CANCELLED
+}

@@ -1,0 +1,4 @@
+[dotenv@17.3.1] injecting env (3) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+Server running on port 5000
+DB Init Error: password authentication failed for user "postgres"
+^C

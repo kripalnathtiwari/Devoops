@@ -1,0 +1,3206 @@
+2026-04-10T11:01:40.873Z createProduct ERROR: 
+Invalid `prisma.product.create()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:45:46
+
+  42     });
+  43 }
+  44 
+→ 45 const product = await prisma.product.create({
+       data: {
+         name: "Test Shirt",
+         price: 250,
+         description: "Nice shirt",
+         categoryId: 1,
+         imageUrl: undefined,
+         colorImages: {},
+         ~~~~~~~~~~~
+         stock: 0,
+         isTrending: false,
+         sizes: undefined,
+         colors: undefined,
+     ?   id?: Int,
+     ?   rating?: Decimal | Null,
+     ?   orderItems?: OrderItemUncheckedCreateNestedManyWithoutProductInput,
+     ?   reviews?: ReviewUncheckedCreateNestedManyWithoutProductInput
+       },
+       include: {
+         category: true
+       }
+     })
+
+Unknown argument `colorImages`. Available options are marked with ?.
+PrismaClientValidationError: 
+Invalid `prisma.product.create()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:45:46
+
+  42     });
+  43 }
+  44 
+→ 45 const product = await prisma.product.create({
+       data: {
+         name: "Test Shirt",
+         price: 250,
+         description: "Nice shirt",
+         categoryId: 1,
+         imageUrl: undefined,
+         colorImages: {},
+         ~~~~~~~~~~~
+         stock: 0,
+         isTrending: false,
+         sizes: undefined,
+         colors: undefined,
+     ?   id?: Int,
+     ?   rating?: Decimal | Null,
+     ?   orderItems?: OrderItemUncheckedCreateNestedManyWithoutProductInput,
+     ?   reviews?: ReviewUncheckedCreateNestedManyWithoutProductInput
+       },
+       include: {
+         category: true
+       }
+     })
+
+Unknown argument `colorImages`. Available options are marked with ?.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async createProduct (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:45:25)
+2026-04-10T11:06:24.740Z createProduct ERROR: 
+Invalid `prisma.product.create()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:45:46
+
+  42     });
+  43 }
+  44 
+→ 45 const product = await prisma.product.create(
+The column `color_images` does not exist in the current database.
+PrismaClientKnownRequestError: 
+Invalid `prisma.product.create()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:45:46
+
+  42     });
+  43 }
+  44 
+→ 45 const product = await prisma.product.create(
+The column `color_images` does not exist in the current database.
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async createProduct (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:45:25)
+2026-04-10T11:06:30.530Z createProduct ERROR: 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:5:47
+
+  2 
+  3 const getAllProducts = async (req, res) => {
+  4     try {
+→ 5         const products = await prisma.product.findMany(
+The column `products.color_images` does not exist in the current database.
+PrismaClientKnownRequestError: 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:5:47
+
+  2 
+  3 const getAllProducts = async (req, res) => {
+  4     try {
+→ 5         const products = await prisma.product.findMany(
+The column `products.color_images` does not exist in the current database.
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getAllProducts (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:5:26)
+2026-04-10T11:06:30.549Z createProduct ERROR: 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:5:47
+
+  2 
+  3 const getAllProducts = async (req, res) => {
+  4     try {
+→ 5         const products = await prisma.product.findMany(
+The column `products.color_images` does not exist in the current database.
+PrismaClientKnownRequestError: 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:5:47
+
+  2 
+  3 const getAllProducts = async (req, res) => {
+  4     try {
+→ 5         const products = await prisma.product.findMany(
+The column `products.color_images` does not exist in the current database.
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getAllProducts (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:5:26)
+2026-04-10T11:06:33.625Z createProduct ERROR: 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:5:47
+
+  2 
+  3 const getAllProducts = async (req, res) => {
+  4     try {
+→ 5         const products = await prisma.product.findMany(
+The column `products.color_images` does not exist in the current database.
+PrismaClientKnownRequestError: 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:5:47
+
+  2 
+  3 const getAllProducts = async (req, res) => {
+  4     try {
+→ 5         const products = await prisma.product.findMany(
+The column `products.color_images` does not exist in the current database.
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getAllProducts (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:5:26)
+2026-04-10T11:06:33.653Z createProduct ERROR: 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:5:47
+
+  2 
+  3 const getAllProducts = async (req, res) => {
+  4     try {
+→ 5         const products = await prisma.product.findMany(
+The column `products.color_images` does not exist in the current database.
+PrismaClientKnownRequestError: 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:5:47
+
+  2 
+  3 const getAllProducts = async (req, res) => {
+  4     try {
+→ 5         const products = await prisma.product.findMany(
+The column `products.color_images` does not exist in the current database.
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getAllProducts (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:5:26)
+2026-04-10T11:06:35.415Z createProduct ERROR: 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:5:47
+
+  2 
+  3 const getAllProducts = async (req, res) => {
+  4     try {
+→ 5         const products = await prisma.product.findMany(
+The column `products.color_images` does not exist in the current database.
+PrismaClientKnownRequestError: 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:5:47
+
+  2 
+  3 const getAllProducts = async (req, res) => {
+  4     try {
+→ 5         const products = await prisma.product.findMany(
+The column `products.color_images` does not exist in the current database.
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getAllProducts (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:5:26)
+2026-04-10T11:06:35.442Z createProduct ERROR: 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:5:47
+
+  2 
+  3 const getAllProducts = async (req, res) => {
+  4     try {
+→ 5         const products = await prisma.product.findMany(
+The column `products.color_images` does not exist in the current database.
+PrismaClientKnownRequestError: 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:5:47
+
+  2 
+  3 const getAllProducts = async (req, res) => {
+  4     try {
+→ 5         const products = await prisma.product.findMany(
+The column `products.color_images` does not exist in the current database.
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getAllProducts (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:5:26)
+2026-04-10T11:06:37.220Z createProduct ERROR: 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:5:47
+
+  2 
+  3 const getAllProducts = async (req, res) => {
+  4     try {
+→ 5         const products = await prisma.product.findMany(
+The column `products.color_images` does not exist in the current database.
+PrismaClientKnownRequestError: 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:5:47
+
+  2 
+  3 const getAllProducts = async (req, res) => {
+  4     try {
+→ 5         const products = await prisma.product.findMany(
+The column `products.color_images` does not exist in the current database.
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getAllProducts (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:5:26)
+2026-04-10T11:06:37.246Z createProduct ERROR: 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:5:47
+
+  2 
+  3 const getAllProducts = async (req, res) => {
+  4     try {
+→ 5         const products = await prisma.product.findMany(
+The column `products.color_images` does not exist in the current database.
+PrismaClientKnownRequestError: 
+Invalid `prisma.product.findMany()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:5:47
+
+  2 
+  3 const getAllProducts = async (req, res) => {
+  4     try {
+→ 5         const products = await prisma.product.findMany(
+The column `products.color_images` does not exist in the current database.
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getAllProducts (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:5:26)
+2026-04-10T11:08:45.865Z createProduct ERROR: 
+Invalid `prisma.product.create()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:45:46
+
+  42     });
+  43 }
+  44 
+→ 45 const product = await prisma.product.create(
+The column `color_images` does not exist in the current database.
+PrismaClientKnownRequestError: 
+Invalid `prisma.product.create()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:45:46
+
+  42     });
+  43 }
+  44 
+→ 45 const product = await prisma.product.create(
+The column `color_images` does not exist in the current database.
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async createProduct (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:45:25)
+2026-04-14T04:45:56.859Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:46
+
+  13 const getProductById = async (req, res) => {
+  14     const { id } = req.params;
+  15     try {
+→ 16         const product = await prisma.product.findUnique({
+               where: {
+             +   id: Int
+               },
+               include: {
+                 category: true,
+                 reviews: {
+                   include: {
+                     user: {
+                       select: {
+                         name: true
+                       }
+                     }
+                   },
+                   orderBy: {
+                     createdAt: "desc"
+                   }
+                 }
+               }
+             })
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:46
+
+  13 const getProductById = async (req, res) => {
+  14     const { id } = req.params;
+  15     try {
+→ 16         const product = await prisma.product.findUnique({
+               where: {
+             +   id: Int
+               },
+               include: {
+                 category: true,
+                 reviews: {
+                   include: {
+                     user: {
+                       select: {
+                         name: true
+                       }
+                     }
+                   },
+                   orderBy: {
+                     createdAt: "desc"
+                   }
+                 }
+               }
+             })
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T04:45:56.877Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:46
+
+  13 const getProductById = async (req, res) => {
+  14     const { id } = req.params;
+  15     try {
+→ 16         const product = await prisma.product.findUnique({
+               where: {
+             +   id: Int
+               },
+               include: {
+                 category: true,
+                 reviews: {
+                   include: {
+                     user: {
+                       select: {
+                         name: true
+                       }
+                     }
+                   },
+                   orderBy: {
+                     createdAt: "desc"
+                   }
+                 }
+               }
+             })
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:46
+
+  13 const getProductById = async (req, res) => {
+  14     const { id } = req.params;
+  15     try {
+→ 16         const product = await prisma.product.findUnique({
+               where: {
+             +   id: Int
+               },
+               include: {
+                 category: true,
+                 reviews: {
+                   include: {
+                     user: {
+                       select: {
+                         name: true
+                       }
+                     }
+                   },
+                   orderBy: {
+                     createdAt: "desc"
+                   }
+                 }
+               }
+             })
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T04:46:15.374Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:46
+
+  13 const getProductById = async (req, res) => {
+  14     const { id } = req.params;
+  15     try {
+→ 16         const product = await prisma.product.findUnique({
+               where: {
+             +   id: Int
+               },
+               include: {
+                 category: true,
+                 reviews: {
+                   include: {
+                     user: {
+                       select: {
+                         name: true
+                       }
+                     }
+                   },
+                   orderBy: {
+                     createdAt: "desc"
+                   }
+                 }
+               }
+             })
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:46
+
+  13 const getProductById = async (req, res) => {
+  14     const { id } = req.params;
+  15     try {
+→ 16         const product = await prisma.product.findUnique({
+               where: {
+             +   id: Int
+               },
+               include: {
+                 category: true,
+                 reviews: {
+                   include: {
+                     user: {
+                       select: {
+                         name: true
+                       }
+                     }
+                   },
+                   orderBy: {
+                     createdAt: "desc"
+                   }
+                 }
+               }
+             })
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T04:46:15.551Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:46
+
+  13 const getProductById = async (req, res) => {
+  14     const { id } = req.params;
+  15     try {
+→ 16         const product = await prisma.product.findUnique({
+               where: {
+             +   id: Int
+               },
+               include: {
+                 category: true,
+                 reviews: {
+                   include: {
+                     user: {
+                       select: {
+                         name: true
+                       }
+                     }
+                   },
+                   orderBy: {
+                     createdAt: "desc"
+                   }
+                 }
+               }
+             })
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:46
+
+  13 const getProductById = async (req, res) => {
+  14     const { id } = req.params;
+  15     try {
+→ 16         const product = await prisma.product.findUnique({
+               where: {
+             +   id: Int
+               },
+               include: {
+                 category: true,
+                 reviews: {
+                   include: {
+                     user: {
+                       select: {
+                         name: true
+                       }
+                     }
+                   },
+                   orderBy: {
+                     createdAt: "desc"
+                   }
+                 }
+               }
+             })
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T04:46:21.238Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:46
+
+  13 const getProductById = async (req, res) => {
+  14     const { id } = req.params;
+  15     try {
+→ 16         const product = await prisma.product.findUnique({
+               where: {
+             +   id: Int
+               },
+               include: {
+                 category: true,
+                 reviews: {
+                   include: {
+                     user: {
+                       select: {
+                         name: true
+                       }
+                     }
+                   },
+                   orderBy: {
+                     createdAt: "desc"
+                   }
+                 }
+               }
+             })
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:46
+
+  13 const getProductById = async (req, res) => {
+  14     const { id } = req.params;
+  15     try {
+→ 16         const product = await prisma.product.findUnique({
+               where: {
+             +   id: Int
+               },
+               include: {
+                 category: true,
+                 reviews: {
+                   include: {
+                     user: {
+                       select: {
+                         name: true
+                       }
+                     }
+                   },
+                   orderBy: {
+                     createdAt: "desc"
+                   }
+                 }
+               }
+             })
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T04:46:21.264Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:46
+
+  13 const getProductById = async (req, res) => {
+  14     const { id } = req.params;
+  15     try {
+→ 16         const product = await prisma.product.findUnique({
+               where: {
+             +   id: Int
+               },
+               include: {
+                 category: true,
+                 reviews: {
+                   include: {
+                     user: {
+                       select: {
+                         name: true
+                       }
+                     }
+                   },
+                   orderBy: {
+                     createdAt: "desc"
+                   }
+                 }
+               }
+             })
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:46
+
+  13 const getProductById = async (req, res) => {
+  14     const { id } = req.params;
+  15     try {
+→ 16         const product = await prisma.product.findUnique({
+               where: {
+             +   id: Int
+               },
+               include: {
+                 category: true,
+                 reviews: {
+                   include: {
+                     user: {
+                       select: {
+                         name: true
+                       }
+                     }
+                   },
+                   orderBy: {
+                     createdAt: "desc"
+                   }
+                 }
+               }
+             })
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T04:49:05.700Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:46
+
+  13 const getProductById = async (req, res) => {
+  14     const { id } = req.params;
+  15     try {
+→ 16         const product = await prisma.product.findUnique({
+               where: {
+             +   id: Int
+               },
+               include: {
+                 category: true,
+                 reviews: {
+                   include: {
+                     user: {
+                       select: {
+                         name: true
+                       }
+                     }
+                   },
+                   orderBy: {
+                     createdAt: "desc"
+                   }
+                 }
+               }
+             })
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:46
+
+  13 const getProductById = async (req, res) => {
+  14     const { id } = req.params;
+  15     try {
+→ 16         const product = await prisma.product.findUnique({
+               where: {
+             +   id: Int
+               },
+               include: {
+                 category: true,
+                 reviews: {
+                   include: {
+                     user: {
+                       select: {
+                         name: true
+                       }
+                     }
+                   },
+                   orderBy: {
+                     createdAt: "desc"
+                   }
+                 }
+               }
+             })
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T04:49:05.716Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:46
+
+  13 const getProductById = async (req, res) => {
+  14     const { id } = req.params;
+  15     try {
+→ 16         const product = await prisma.product.findUnique({
+               where: {
+             +   id: Int
+               },
+               include: {
+                 category: true,
+                 reviews: {
+                   include: {
+                     user: {
+                       select: {
+                         name: true
+                       }
+                     }
+                   },
+                   orderBy: {
+                     createdAt: "desc"
+                   }
+                 }
+               }
+             })
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:46
+
+  13 const getProductById = async (req, res) => {
+  14     const { id } = req.params;
+  15     try {
+→ 16         const product = await prisma.product.findUnique({
+               where: {
+             +   id: Int
+               },
+               include: {
+                 category: true,
+                 reviews: {
+                   include: {
+                     user: {
+                       select: {
+                         name: true
+                       }
+                     }
+                   },
+                   orderBy: {
+                     createdAt: "desc"
+                   }
+                 }
+               }
+             })
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T04:49:17.433Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:46
+
+  13 const getProductById = async (req, res) => {
+  14     const { id } = req.params;
+  15     try {
+→ 16         const product = await prisma.product.findUnique({
+               where: {
+             +   id: Int
+               },
+               include: {
+                 category: true,
+                 reviews: {
+                   include: {
+                     user: {
+                       select: {
+                         name: true
+                       }
+                     }
+                   },
+                   orderBy: {
+                     createdAt: "desc"
+                   }
+                 }
+               }
+             })
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:46
+
+  13 const getProductById = async (req, res) => {
+  14     const { id } = req.params;
+  15     try {
+→ 16         const product = await prisma.product.findUnique({
+               where: {
+             +   id: Int
+               },
+               include: {
+                 category: true,
+                 reviews: {
+                   include: {
+                     user: {
+                       select: {
+                         name: true
+                       }
+                     }
+                   },
+                   orderBy: {
+                     createdAt: "desc"
+                   }
+                 }
+               }
+             })
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T04:49:17.452Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:46
+
+  13 const getProductById = async (req, res) => {
+  14     const { id } = req.params;
+  15     try {
+→ 16         const product = await prisma.product.findUnique({
+               where: {
+             +   id: Int
+               },
+               include: {
+                 category: true,
+                 reviews: {
+                   include: {
+                     user: {
+                       select: {
+                         name: true
+                       }
+                     }
+                   },
+                   orderBy: {
+                     createdAt: "desc"
+                   }
+                 }
+               }
+             })
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:46
+
+  13 const getProductById = async (req, res) => {
+  14     const { id } = req.params;
+  15     try {
+→ 16         const product = await prisma.product.findUnique({
+               where: {
+             +   id: Int
+               },
+               include: {
+                 category: true,
+                 reviews: {
+                   include: {
+                     user: {
+                       select: {
+                         name: true
+                       }
+                     }
+                   },
+                   orderBy: {
+                     createdAt: "desc"
+                   }
+                 }
+               }
+             })
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T04:55:27.374Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:46
+
+  13 const getProductById = async (req, res) => {
+  14     const { id } = req.params;
+  15     try {
+→ 16         const product = await prisma.product.findUnique({
+               where: {
+             +   id: Int
+               },
+               include: {
+                 category: true,
+                 reviews: {
+                   include: {
+                     user: {
+                       select: {
+                         name: true
+                       }
+                     }
+                   },
+                   orderBy: {
+                     createdAt: "desc"
+                   }
+                 }
+               }
+             })
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:46
+
+  13 const getProductById = async (req, res) => {
+  14     const { id } = req.params;
+  15     try {
+→ 16         const product = await prisma.product.findUnique({
+               where: {
+             +   id: Int
+               },
+               include: {
+                 category: true,
+                 reviews: {
+                   include: {
+                     user: {
+                       select: {
+                         name: true
+                       }
+                     }
+                   },
+                   orderBy: {
+                     createdAt: "desc"
+                   }
+                 }
+               }
+             })
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T04:55:27.399Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:46
+
+  13 const getProductById = async (req, res) => {
+  14     const { id } = req.params;
+  15     try {
+→ 16         const product = await prisma.product.findUnique({
+               where: {
+             +   id: Int
+               },
+               include: {
+                 category: true,
+                 reviews: {
+                   include: {
+                     user: {
+                       select: {
+                         name: true
+                       }
+                     }
+                   },
+                   orderBy: {
+                     createdAt: "desc"
+                   }
+                 }
+               }
+             })
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation in
+C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:46
+
+  13 const getProductById = async (req, res) => {
+  14     const { id } = req.params;
+  15     try {
+→ 16         const product = await prisma.product.findUnique({
+               where: {
+             +   id: Int
+               },
+               include: {
+                 category: true,
+                 reviews: {
+                   include: {
+                     user: {
+                       select: {
+                         name: true
+                       }
+                     }
+                   },
+                   orderBy: {
+                     createdAt: "desc"
+                   }
+                 }
+               }
+             })
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T05:00:55.023Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T05:00:55.035Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T05:06:09.386Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T05:09:46.803Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T05:09:46.947Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T05:16:42.494Z SERVER STARTUP ERROR: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at app.listen (C:\Users\ASUS\Desktop\XStyle\server\node_modules\express\lib\application.js:605:24)
+    at Object.<anonymous> (C:\Users\ASUS\Desktop\XStyle\server\index.js:70:20)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+2026-04-14T06:09:22.340Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:09:22.372Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:09:40.629Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:09:40.648Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:13:58.797Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:13:58.812Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:16:41.909Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:16:41.920Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:16:57.184Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:16:57.207Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:18:15.697Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:18:15.759Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:22:49.484Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:22:49.555Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:23:30.385Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:23:30.441Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:23:40.757Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:23:40.773Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:24:14.894Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:24:15.008Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:24:16.726Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:24:16.964Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:26:23.511Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:26:23.519Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:28:12.792Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:28:12.801Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:29:13.506Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:29:34.982Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:29:35.059Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:29:53.068Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:29:53.078Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:34:37.247Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
+2026-04-14T06:34:37.274Z createProduct ERROR: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+PrismaClientValidationError: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    category: true,
+    reviews: {
+      include: {
+        user: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: {
+        createdAt: "desc"
+      }
+    }
+  }
+}
+
+Argument `id` is missing.
+    at wn (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\ASUS\Desktop\XStyle\server\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async getProductById (C:\Users\ASUS\Desktop\XStyle\server\src\controllers\productController.js:16:25)
